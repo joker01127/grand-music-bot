@@ -129,11 +129,11 @@ async def help(client: Client, message: Message):
          [
             [
                 InlineKeyboardButton("‹ مطور السورس ›", url=f"https://t.me/BK_ZT"),
-                ),
+               
             ],
             [
                 InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/CR_T2"),
-                ),
+               
             ],
             [
                 InlineKeyboardButton("➕ ضيفني لجروبك", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
