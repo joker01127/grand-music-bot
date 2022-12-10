@@ -12,7 +12,7 @@ def stream_markup(user_id):
   buttons = [
     [
       InlineKeyboardButton(text="‹ القائمة ›", callback_data=f'cbmenu | {user_id}'),
-      InlineKeyboardButton(text="‹ قناة السورس ›", url=f'https://t.me/CR_T2'),
+      InlineKeyboardButton(text="‹ قناة السورس ›", url=f'https://t.me/MUSTAR_X8'),
     ],
     [
     InlineKeyboardButton(
