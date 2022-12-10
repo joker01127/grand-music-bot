@@ -39,7 +39,7 @@ async def ytdl(format: str, link: str):
     return 0, stderr
 
 
-@Client.on_message(command(["تشغيل","شغل","play","/play","صلاح", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["تشغيل","شغل","play","/play","المستر", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
     do = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{UPDATES_CHANNEL}&user_id={m.from_user.id}").text
@@ -132,7 +132,7 @@ async def play(c: Client, m: Message):
                     await suhu.delete()
                     await m.reply_photo(
                         photo=f"{IMG_1}",
-                        caption=f"💡 ***-› تم اضافتها للانتظار** `{pos}`\n\n🏷 **-› الاسم:** [{songname}]({link})| موسيقى`\n💭**-› ايدي المحادثه:** `{chat_id}`\n🎧 **-› طلب الكائن دا:** {m.from_user.mention()}",
+                        caption=f"💡 ***-› تم اضافتها للانتظار** `{pos}`\n\n🏷 **-› الاسم:** [{songname}]({link})| العنوان`\n💭**-› ايدي المحادثه:** `{chat_id}`\n🎧 **-› طلب بواسطه دا:** {m.from_user.mention()}",
                         reply_markup=keyboard,
                     )
                 else:
@@ -150,7 +150,7 @@ async def play(c: Client, m: Message):
                         requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         await m.reply_photo(
                             photo=f"{IMG_2}",
-                            caption=f"-› الحالة : تم التشغيل بنجاح\n🏷 -› الاسم: [{songname}]({link})\n💭-› ايدي المحادثه: {chat_id}`\n💡 ** الحالة:**ل بنجاح`\n🎧 **-› طلب الكائن دا:** {requester}\n📹 ** نوع البث:** `موسيقى",
+                            caption=f"-› الحالة : تم التشغيل بنجاح\n🏷 -› الاسم: [{songname}]({link})\n💭-› ايدي المحادثه: {chat_id}`\n💡 ** الحالة:**ل بنجاح`\n🎧 **-› طلب الكائن دا:** {requester}\n📹 ** نوع البث:** `قران كريم",
                             reply_markup=keyboard,
                         )
                     except Exception as e:
@@ -159,7 +159,7 @@ async def play(c: Client, m: Message):
             else:
                 if len(m.command) < 2:
                     await m.reply(
-                        "» قم بالرد على ملف صوتي او اكتب اسم اغنيه للبحث عنهاّ**"
+                        "» قم بالرد على ملف صوتي او اكتب اسم السورة للبحث عنهاّ**"
                     )
                 else:
                     suhu = await c.send_message(chat_id, "🔍**جاري البحث...**")
@@ -185,7 +185,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=thumbnail,
-                                    caption=f"💡 ***-› تم اضافتها للانتظار** `{pos}`\n\n🏷 **-› الاسم:** [{songname}]({url})| موسيقى`\n**⏱ المدهّ:** `{duration}`\n🎧 **-› طلب الكاين دا:** {requester}",
+                                    caption=f"💡 ***-› تم اضافتها للانتظار** `{pos}`\n\n🏷 **-› الاسم:** [{songname}]({url})| العنوان`\n**⏱ المدهّ:** `{duration}`\n🎧 **-› طلب الكاين دا:** {requester}",
                                     reply_markup=keyboard,
                                 )
                             else:
@@ -203,7 +203,7 @@ async def play(c: Client, m: Message):
                                     requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                     await m.reply_photo(
                                         photo=thumbnail,
-                                        caption=f"🏷 **اسم:** [{songname}]({url})\n**⏱ المدة:** `{duration}`\n💡 ** الحالة:** `يشغل`\n🎧 **بواسطه:** {requester}\n📹 ** نوع البث:** `موسيقى`",
+                                        caption=f"🏷 **اسم:** [{songname}]({url})\n**⏱ المدة:** `{duration}`\n💡 ** الحالة:** `يشغل`\n🎧 **بواسطه:** {requester}\n📹 ** نوع البث:** `قران كريم`",
                                         reply_markup=keyboard,
                                     )
                                 except Exception as ep:
@@ -239,7 +239,7 @@ async def play(c: Client, m: Message):
                             )
                             await m.reply_photo(
                                 photo=thumbnail,
-                                caption=f"💡 ***-› تم اضافتها للانتظار** `{pos}`\n\n🏷 **-› الاسم:** [{songname}]({url})| موسيقى`\n**⏱ المدهّ:** `{duration}`\n🎧 **-› طلب الكائن دا:** {requester}",
+                                caption=f"💡 ***-› تم اضافتها للانتظار** `{pos}`\n\n🏷 **-› الاسم:** [{songname}]({url})| العنوان`\n**⏱ المدهّ:** `{duration}`\n🎧 **-› طلب الكائن دا:** {requester}",
                                 reply_markup=keyboard,
                             )
                         else:
@@ -257,7 +257,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=thumbnail,
-                                    caption=f"🏷 **-› الاسم:** [{songname}]({url})\n**⏱ المده:** `{duration}`\n💡 ** الحالة:** `يشغل`\n🎧 **-› طلب الكائن داٛ:** {requester}\n📹 ** نوع البثّ:** `موسيقى`",
+                                    caption=f"🏷 **-› الاسم:** [{songname}]({url})\n**⏱ المده:** `{duration}`\n💡 ** الحالة:** `يشغل`\n🎧 **-› طلب الكائن داٛ:** {requester}\n📹 ** نوع البثّ:** `قران كريم`",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
