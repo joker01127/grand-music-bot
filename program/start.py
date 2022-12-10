@@ -62,8 +62,8 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_PHOTO}",
-        caption=f"""💎 **مرحبا عزيزي » {message.from_user.mention()} !**\n
-**⌔ انا بوت الماس استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
+        caption=f"""🕋 **مرحبا عزيزي » {message.from_user.mention()} !**\n
+**⌔ انا بوت المستر استطيع تشغيل القران الكريم في المكالمات  الصوتية! 
 
 ⌔ لمعرفة اوامر هذا البوت اضغط على » اوامر التشغيل!
 
@@ -84,7 +84,7 @@ async def start_(client: Client, message: Message):
                         "‹ جروب الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/CR_T2"
+                        "‹ قناة السورس ›", url=f"https://t.me/MUSTAR_X8"
                     ),
                 ],
                 [
@@ -98,19 +98,19 @@ async def start_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["مبرمج السورس", f"صلاح", f"سوريا", f"السورس", f"مطور", f"المطور"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["مبرمج السورس", f"عبدالرحمن", f"MR_ALEX", f"السورس", f"مطور", f"المطور"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/35dc28f44f9fa1d0578f8.jpg",
-        caption=f"""Programmer [SalahSiria](https://t.me/CR_T2) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
+        photo=f"https://telegra.ph/file/3dbef9fb9cbc7ad4318d6.jpg",
+        caption=f"""Programmer [MR_X](https://t.me/MR_X_N) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/CR_T2"),
+                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/MUSTAR_X8"),
             ],
             [
                 InlineKeyboardButton(
-                    "‹ مطور السورس ›", url=f"https://t.me/BK_ZT"
+                    "‹ مطور السورس ›", url=f"https://t.me/MR_X_N"
                 ),
             ],
             [
@@ -124,15 +124,15 @@ async def start(client: Client, message: Message):
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{DEV_PHOTO}",
-        caption=f"""⌔ سورس الماس \n⌔ افضل سورس تشغيل ميوزك في التليجرام""",
+        caption=f"""⌔ سورس المستر \n⌔ افضل سورس تشغيل القران الكريم في التليجرام""",
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("‹ مطور السورس ›", url=f"https://t.me/BK_ZT"),
+                InlineKeyboardButton("‹ مطور السورس ›", url=f"https://t.me/MR_X_N"),
                
             ],
             [
-                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/CR_T2"),
+                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/MUSTAR_X8"),
                
             ],
             [
@@ -142,7 +142,7 @@ async def help(client: Client, message: Message):
      )
   )
 
-@Client.on_message(command(["جلب التوكن", f"لب_التوكن", "hadow"]) & filters.private & ~filters.edited)
+@Client.on_message(command(["اليكس", f"ليكس", "MR_X_N"]) & filters.private & ~filters.edited)
 @sudo_users_only
 async def shadow(c: Client, message: Message):
     start = time()
